@@ -118,11 +118,7 @@ export default function Home() {
             <Card key={plano.id} color="#f28305" height="200px">
               <h3>Plano {plano.title}</h3>
               <span>{plano.minutes} minutos</span>
-              <Button
-                data-testid={`plan${plano.id}`}
-                type="button"
-                onClick={handleSimulation}
-              >
+              <Button type="button" onClick={handleSimulation}>
                 Experimentar
               </Button>
             </Card>
@@ -180,7 +176,7 @@ export default function Home() {
       )}
       {Object.keys(finalPrice).length > 0 && (
         <CompareContainer data-testid="compare" id="compare">
-          <h3>Observe o resultado</h3>
+          <h3>Confira a economia ao utilizar nosso plano</h3>
           <Row>
             <Column>
               <h4>Origem</h4>

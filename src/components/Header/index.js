@@ -7,6 +7,12 @@ import Button from '~/components/Button';
 import { Container, Content, RightMenu } from './styles';
 
 export default function Header() {
+  function scrollToSimulation() {
+    const element = document.getElementById('simulation');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
   return (
     <Container>
       <Content>
@@ -19,7 +25,7 @@ export default function Header() {
             color="#5667F9"
             width="150px"
             type="button"
-            onClick={() => {}}
+            onClick={scrollToSimulation}
           >
             Conheça
           </Button>
